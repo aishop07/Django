@@ -96,9 +96,9 @@ def delete(request,id):
 
 def login(request):   
     if request.method == "POST":
-        email = request.POST['useremail']
+        username = request.POST['username']
         pwd = request.POST['userpassword']
-        member = Member.objects.filter(useremail=email,password=pwd).values('username')
+        member = Member.objects.filter(username=username,password=pwd).values('username')
         if member:
             response = HttpResponse("<script>alert('登入成功');location.href='/'</script>")
             if 'rememberme' in request.POST:
