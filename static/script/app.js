@@ -1,1 +1,0 @@
-// document.querySelector("#myH").innerHTML = "Hello All"
